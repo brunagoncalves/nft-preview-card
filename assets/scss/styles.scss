@@ -60,7 +60,7 @@ main {
       position: relative;
       cursor: pointer;
 
-      &:hover .overlay::before {
+      &:hover .overlay {
         opacity: 50.3%;
       }
 
@@ -80,28 +80,12 @@ main {
         width: 100%;
         height: 100%;
         border-radius: 0.5rem;
+        background-color: var(--cyan);
+        opacity: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         pointer-events: none;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: var(--cyan);
-          border-radius: 0.5rem;
-          opacity: 0;
-          transition: opacity 0.3s ease-in;
-          z-index: 0;
-        }
-
-        svg {
-          z-index: 1;
-        }
       }
     }
 
